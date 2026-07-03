@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body data-theme="light">
+
+  <div class="page-layout">
+
+    <aside class="sidebar">
+      <h1>Menu</h1>
+      <a href="#" id="taskLink"><i class="ri-task-line"></i> Task</a>
+      <a href="#" id="attributeLink"><i class="ri-file-list-3-line"></i> Att vs Pro</a>
+      <a href="#" id="pipelineLink"><i class="ri-git-branch-line"></i> Pipeline</a>
+      <a href="#" id="eventLink"> <i class="ri-bubble-chart-line"></i> Event Flow</a>
+
+      <button id="themeBtn">🌙 Dark Mode</button>
+    </aside>
+
+    <main class="main-content">
+
+      <!-- TASK PAGE  -->
+      <div id="taskPage">
+        <nav class="navbar">
+          <div class="nav-text">
+            <h1>Hello Guys! <span class="wave">👋</span></h1>
+            <p>Its good to see you again.</p>
+          </div>
+          <div class="hero-img">
+            <img src="personal goals checklist-cuate.png" alt="">
+          </div>
+          <div class="stats">
+
+            <div class="start-box">
+              <i class="ri-task-line"></i>
+              <h3 id="totalTask">0</h3>
+              <p>Total</p>
+            </div>
+
+            <div class="start-box">
+              <i class="ri-time-line"></i>
+              <h3 id="pendingTask">0</h3>
+              <p>Pending</p>
+            </div>
+
+            <div class="start-box">
+              <i class="ri-checkbox-circle-line"></i>
+              <h3 id="completedTask">0</h3>
+              <p>Completed</p>
+            </div>
+          </div>
+        </nav>
+        <section>
+          <h2>Add Task</h2>
+          <form class="task-form">
+            <input id="taskInput" type="text" placeholder="Enter Your task...">
+
+            <select id="categorySelect">
+              <option value="">Select Category</option>
+              <option value="Study">Study 📚</option>
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Health">Health</option>
+            </select>
+            <button id="addbtn" type="submit"> + Add Task</button>
+          </form>
+        </section>
+
+        <section class="task-section">
+          <div class="task-header">
+
+            <h2 id="allTask">All Task</h2>
+          </div>
+
+          <div class="task-list">
+          </div>
+
+        </section>
+      </div>
+
+      <!-- ATTRIBUTE VS PROPERTIES  -->
+      <div id="attributePage" style="display:none;">
+        <section>
+
+          <h2>Attributes vs Properties</h2>
+
+          <div class="attribute-info">
+            <h3>What is the Difference?</h3>
+
+            <p>
+              <strong>Attribute</strong> is the value written inside the HTML tag.
+              It can be accessed using <code>getAttribute()</code> and changed using
+              <code>setAttribute()</code>.
+            </p>
+
+            <p>
+              <strong>Property</strong> is the current value of an element inside the
+              JavaScript DOM object. It changes whenever the user interacts with the
+              element or JavaScript updates it.
+            </p>
+
+            <table class="compare-table">
+              <tr>
+                <th>Attribute</th>
+                <th>Property</th>
+              </tr>
+
+              <tr>
+                <td>Stored in HTML</td>
+                <td>Stored in DOM Object</td>
+              </tr>
+
+              <tr>
+                <td>Initial Value</td>
+                <td>Current Value</td>
+              </tr>
+
+              <tr>
+                <td>getAttribute()</td>
+                <td>.value</td>
+              </tr>
+
+              <tr>
+                <td>setAttribute()</td>
+                <td>.value = "..."</td>
+              </tr>
+            </table>
+
+            <p class="note">
+              💡 <strong>Try it below:</strong> Type something in the input box, then click
+              <b>Show Attribute</b> and <b>Show Property</b>. You'll notice that the
+              <b>Attribute</b> usually remains the original HTML value, while the
+              <b>Property</b> always reflects the current value of the input.
+            </p>
+          </div>
+
+          <div class="attribute-simple">
+
+            <div class="diff-box">
+              <h3>HTML</h3>
+
+              <input id="demoInput" type="text" value="Hello World" placeholder="Type here...">
+
+              <br><br>
+
+              <div class="button-group">
+                <button id="showAttribute">Show Attribute</button>
+                <button id="showProperty">Show Property</button>
+                <button id="changeProperty">Change Property</button>
+                <button id="changeAttribute">Change Attribute</button>
+
+              </div>
+
+              <div class="result">
+                Output...
+              </div>
+
+            </div>
+
+        </section>
+      </div>
+
+      <!-- PIPELINE -->
+
+      <div id="pipelinePage" style="display:none;">
+        <section class="pipeline-section">
+          <h2>Browser Rendering Pipeline</h2>
+          <div class="pipeline-cards">
+            <div class="pipeline-card">HTML</div>
+            <span>↓</span>
+            <div class="pipeline-card">Parsing</div>
+            <span>↓</span>
+            <div class="pipeline-card">Tokenization</div>
+            <span>↓</span>
+            <div class="pipeline-card">DOM Tree</div>
+            <span>+</span>
+            <div class="pipeline-card">CSSOM Tree</div>
+            <span>↓</span>
+            <div class="pipeline-card">Render Tree</div>
+            <span>↓</span>
+            <div class="pipeline-card">Layout</div>
+            <span>↓</span>
+            <div class="pipeline-card">Paint</div>
+            <span>↓</span>
+            <div class="pipeline-card">Composite</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- EVENT PROPAGATION -->
+
+      <div id="eventPage" style="display:none;">
+        <section class="event-section">
+          <h2>Event Propagation</h2>
+
+          <div class="grandparent">
+            Grand Parent
+            <div class="parent">
+              Parent
+              <div class="child">Child</div>
+            </div>
+          </div>
+
+          <div class="output"></div>
+        </section>
+      </div>
+
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
