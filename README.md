@@ -45,30 +45,11 @@ Smart-Task-Manager
 │
 ├── screenshots
 │   ├── home.png
-│   ├── dark-mode.png
-│   ├── tasks.png
-│   ├── attribute.png
-│   ├── pipeline.png
-│   └── event.png
-│
 └── README.md
 ```
 
 ---
 
-# 🚀 How to Run
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/Smart-Task-Manager.git
-```
-
-2. Open the project folder.
-
-3. Run **index.html** in your browser.
-
----
 
 # 📚 What You'll Learn
 
